@@ -1,0 +1,4 @@
+<div class="photo">
+  <%= link_to image_tag(photo.photo_url(:thumb)), photo.photo_url if photo.photo? %>
+  <div class="name"><%= photo.name %></div>
+</div>

@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: oreckr_development
+  pool: 5
+  username: oreckr_development
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: oreckr_test
+  pool: 5
+  username: oreckr_test
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: oreckr_production
+  pool: 5
+  username: oreckr_production
+  password:

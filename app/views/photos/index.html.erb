@@ -1,0 +1,33 @@
+<%- model_class = Photo -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => "#{model_class.model_name.human.pluralize} in #{@album.name}" %></h1>
+</div>
+
+<div id="photos">
+  <% if @photos.present? %>
+    <%= render @photos %>
+  <% else %>
+    <span id="no_photos">No photos.</span>
+  <% end %>
+</div>
+
+<div style="clear: both;"></div>
+
+<h2>Upload photos to this album</h2>
+
+<%= form_for [:album, Photo.new] do |f| %>
+  <div class="control-group">
+    <div class="controls">
+      <div>Drag &amp; Drop photos</div>
+      <div>or</div>
+      <%= f.file_field :photo, multiple: true, accept: "image/*", name: "photo[photo]" %>
+    </div>
+  </div>
+<% end %>
+
+<script id="template-upload" type="text/x-tmpl">
+<div class="upload">
+  <%= image_tag("loader.gif") %>&nbsp;{%=o.name%}
+  <div class="progress"><div class="bar" style="width: 0%"></div></div>
+</div>
+</script>

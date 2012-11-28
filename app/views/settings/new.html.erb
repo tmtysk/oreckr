@@ -1,0 +1,7 @@
+<%- model_class = Setting -%>
+<div class="page-header">
+  <h1>Welcome!</h1>
+  <h2>You have to create <%=t '.title', :default => t('helpers.titles.new', :model => model_class.model_name.human,
+                                 :default => "New #{model_class.model_name.human}") %> first.</h2>
+</div>
+<%= render :partial => 'form' %>

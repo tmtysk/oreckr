@@ -1,0 +1,2 @@
+class OreckrError < StandardError
+end

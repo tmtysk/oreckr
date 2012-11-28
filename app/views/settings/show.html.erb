@@ -1,0 +1,17 @@
+<%- model_class = Setting -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:access_key_id) %>:</strong></dt>
+  <dd><%= "*" * @setting.access_key_id.size %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:secret_access_key) %>:</strong></dt>
+  <dd><%= "*" * @setting.secret_access_key.size %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:s3_bucket_name) %>:</strong></dt>
+  <dd><%= @setting.s3_bucket_name %></dd>
+</dl>
+
+<div class="form-actions">
+  You cannot update the setting now.
+</div>
