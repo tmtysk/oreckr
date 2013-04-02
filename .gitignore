@@ -13,3 +13,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+/.vagrant
+/.rbenv-version
+/vendor/bundle
+/chef-repo/cookbooks/*
+/chef-repo/tmp

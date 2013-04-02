@@ -26,8 +26,11 @@
 <% end %>
 
 <script id="template-upload" type="text/x-tmpl">
-<div class="upload">
-  <%= image_tag("loader.gif") %>&nbsp;{%=o.name%}
-  <div class="progress"><div class="bar" style="width: 0%"></div></div>
-</div>
+  <% if false %>
+    <% # jquery-fileupload-rails is not supported jQuery 1.9? %>
+    <div class="upload">
+      <%= image_tag("loader.gif") %>&nbsp;{%=o.name%}
+      <div class="progress"><div class="bar" style="width: 0%"></div></div>
+    </div>
+  <% end %>
 </script>

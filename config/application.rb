@@ -12,11 +12,11 @@ end
 module Oreckr
   class Application < Rails::Application
     # Heroku REQUIRES this to be false
-    config.assets.initialize_on_precompile = false
+    #config.assets.initialize_on_precompile = false
 
     # # Not required, but a good best-practice for performance.
     # # This setting will compress your assets as much as possible using YUI and Uglifier by default
-    config.assets.compress = true
+    #config.assets.compress = true
     #
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
