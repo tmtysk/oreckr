@@ -25,7 +25,9 @@ Experimental project of owned-photo-storage-service using on AWS.
     $ librarian-chef install
     $ cd ..
     $ vagrant up
+      # required sudo password to mount NFS.
     $ vagrant ssh
+    $ rbenv local 2.0.0-p0
     $ cd /vagrant
     $ bundle install --path vendor/bundle
     $ bundle exec rake db:migrate
